@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" crossorigin="anonymous" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body>
+<div class="main">
+    <div class="sidebarbox">
+        <div class="logobox"><img id="logoimg" src="assets/svg/logo.svg" alt="TPG logo"></div>
+        <div class="timebox">
+            <div class="vertical-center">
+                <span>
+                <h1>12:56</h1>
+                </span>
+            </div>
+        </div>
+        <div class="datebox">
+            <div class="vertical-center">
+                <span>
+                    <h1>10</h1>
+                    <h1>Oktoober</h1>
+                    <h1>2020</h1>
+                </span>
+            </div>
+        </div>
+        <div class="analogtimebox">
+            <div class="vertical-center">
+                <div>
+                    <svg
+                            class="progress-ring"
+                            width="120"
+                            height="120">
+                        <circle
+                                class="progress-ring__circle"
+                                stroke="red"
+                                stroke-width="4"
+                                fill="transparent"
+                                r="52"
+                                cx="60"
+                                cy="60"/>
+                        <text id="progressper" x="50%" y="50%" text-anchor="middle" stroke="#000"  dy=".3em"></text>
+                    </svg>
+                </div>
+
+                    <script>
+                        let i = 0;
+                        const interval = setInterval(() => {
+                            i++;
+                            document.getElementById("progressper").textContent = i;
+                            setProgress(i);
+                            if (i === 100)
+                                i=0;
+
+                        }, 1000);
+
+                        var circle = document.querySelector('circle');
+                        var radius = circle.r.baseVal.value;
+                        var circumference = radius * 2 * Math.PI;
+
+                        circle.style.strokeDasharray = `${circumference} ${circumference}`;
+                        circle.style.strokeDashoffset = `${circumference}`;
+
+                        function setProgress(percent) {
+                            const offset = circumference - percent / 100 * circumference;
+                            circle.style.strokeDashoffset = offset;
+                        }
+                    </script>
+                <p1 class="boldtxt">Aega on jäänud tunni lõppuni</p1><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="newsbox">
+
+        <div class="newsline">
+            <h1 id="newsTitle">Uudised</h1>
+            <h3>Uudiste teema 1</h3>
+            <p1>
+                On recommend tolerably my belonging or am. Mutual has cannot beauty indeed now sussex merely you. It possible no husbands jennings ye offended packages pleasant he. Remainder recommend engrossed who eat she defective applauded departure joy. Get dissimilar not introduced day her apartments. Fully as taste he mr do smile abode every. Luckily offered article led lasting country minutes nor old. Happen people things oh is oppose up parish effect. Law handsome old outweigh humoured far appetite.
+                Yet remarkably appearance get him his projection. Diverted endeavor bed peculiar men the not desirous. Acuteness abilities ask can offending furnished fulfilled sex. Warrant fifteen exposed
+            </p1>
+        </div>
+    </div>
+
+    <div class="databox">
+        <div class="ilm">
+            <div id="ilm1">
+                <img class="weathericon" src="assets/svg/weathericons/sunny.svg" alt="Weather icon"><br>
+                <p1 id="tmp1">7 - 13°C</p1>
+            </div>
+            <div id="ilm2">
+                <img class="weathericon" src="assets/svg/weathericons/cloudy.svg" alt="Weather icon"><br>
+                <p1 id="tmp2">7 - 13°C</p1>
+            </div>
+            <div id="ilm3">
+                <img class="weathericon" src="assets/svg/weathericons/snowing.svg" alt="Weather icon"><br>
+                <p1 id="tmp3">7 - 13°C</p1>
+            </div>
+            <div id="ilm4">
+                <img class="weathericon" src="assets/svg/weathericons/raining-1.svg" alt="Weather icon"><br>
+                <p1 id="tmp4">7 - 13°C</p1>
+            </div>
+            <div id="ilm5">
+                <img class="weathericon" src="assets/svg/weathericons/thunderstorm.svg" alt="Weather icon"><br>
+                <p1 id="tmp5" >-7 - 10 °C</p1>
+            </div>
+        </div>
+        <div class="data">
+            <div class="peatused">
+                <div class="peatus1">
+                    <div class="row">
+                        <img class="peatusicon" src="assets/svg/bus-stop.svg" alt="Bus-stop icon">
+                        <p1 id="peatusTitle1">Pae peatus</p1>
+                    </div>
+                    <div class="row">
+                        <p1 class="boldtxt" id="busnum1">50</p1>
+                        <p1 id="bustime1">13:20</p1>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <p1 class="boldtxt" id="busnum2">58</p1>
+                        <p1 id="bustime2">13:30</p1>
+                    </div>
+
+                </div>
+                <div class="peatus2">
+                    <div class="row">
+                        <img class="peatusicon" src="assets/svg/bus-stop.svg" alt="Bus-stop icon">
+                        <p1 id="peatusTitle2">Kiive peatus</p1>
+                    </div>
+                    <div class="row">
+                        <p1 class="boldtxt" id="busnum3">50</p1>
+                        <p1 id="bustime3">13:20</p1>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <p1 class="boldtxt" id="busnum4">58</p1>
+                        <p1 id="bustime4">13:30</p1>
+                    </div>
+                </div>
+            </div>
+            <div class="uldandmed">
+                <h3>Koolitöö muudatused ja asendused</h3>
+                <div class="cdata">
+                    <div class="vertical-center">
+                        <span>
+                            <p1>Kool töötab tava režiimis</p1><br>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="asendused">
+            <h3 id="asendusteTitle">Koolisöökla päevamenüü</h3>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

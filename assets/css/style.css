@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    margin: 0;
+}
+
+body{
+    background: #FFFFFF;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+img{
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5{
+    font-weight: bold;
+}
+
+h1{
+    font-size: 32px;
+    line-height: 40px;
+}
+
+
+h3{
+    padding: 24px 0 24px;
+    font-size: 24px;
+}
+
+p{
+    font-size: 14px;
+}
+
+p1{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+hr{
+    border: none;
+    background-color: #000;
+    color: #000;
+    height: 1px;
+}
+
+span{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+
+.main{
+    display: flex;
+}
+
+.vertical-center{
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebarbox, .newsbox ,.databox{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    box-sizing: border-box;
+    /*border: 1px solid black ;*/
+    padding: 45px 10px 0px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+.boldtxt{
+    font-weight: bold;
+}
+
+#busnum1, #busnum2, #busnum3, #busnum4,
+#bustime1, #bustime2, #bustime3, #bustime4{
+    padding: 7px 45px 7px 20px;
+}
+
+#bustime2, #bustime4{
+    padding-bottom: 15px;
+}
+
+
+.sidebarbox{
+    width: 14vw;
+    height: 100vh;
+}
+
+.newsbox{
+    width: 42vw;
+    height: 100vh;
+}
+
+.databox{
+    width: 44vw;
+    height: 100vh;
+}
+
+#logoimg{
+    width: 150px;
+}
+
+#newsTitle{
+    text-align: left;
+    width: 100%;
+}
+
+#asendusteTitle{
+    text-align: left;
+    margin: 10px 15px 0;
+    padding: 0;
+}
+
+.timebox, .datebox, .analogtimebox{
+    margin: 10px 10px;
+    background: #F0F0F0;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.timebox{
+    height: 90px;
+}
+
+.datebox{
+    height: 250px;
+    background: #E5E5E5;
+}
+
+.analogtimebox{
+    flex: 1;
+    margin-bottom: 25px;
+    background: #cecece;
+    /*height: 340px;*/
+}
+
+.newsline{
+    flex: 1;
+    text-align: justify;
+    background: #F0F0F0;
+    border-radius: 25px;
+    margin: 0px 10px 25px;
+    padding: 10px 24px 100px;
+}
+
+.ilm{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    height: 200px;
+    background: #cecece;
+    border-radius: 25px;
+    margin: 0 10px 0;
+}
+
+#ilm1, #ilm2, #ilm3, #ilm4, #ilm5{
+    width: 100%;
+    margin: 28px 20px;
+}
+
+#tmp1, #tmp2, #tmp3, #tmp4, #tmp5{
+    font-size: 25px;
+}
+
+.weathericon{
+    width: 70px;
+    height: 70px;
+    padding: 0 0 25px;
+}
+
+.peatusicon{
+    width: 50px;
+    height: 50px;
+    padding: 10px 10px 15px;
+}
+
+.data{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: stretch;
+    margin: 25px 10px 0;
+}
+
+.peatused{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.peatus1, .peatus2{
+    flex: 1;
+    width: 200px;
+    background: #ECECEC;
+    border-radius: 25px;
+    margin: 0 30px 25px 0;
+    text-align: left;
+}
+
+.peatus2{
+    margin-bottom: 0;
+}
+
+#peatusTitle1, #peatusTitle2{
+    width: 100%;
+    padding: 15px 15px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.uldandmed{
+    width: 100%;
+    background: #cecece;
+    border-radius: 25px;
+}
+
+.asendused{
+    height: 230px;
+    background: #cecece;
+    border-radius: 25px;
+    margin: 15px 10px 25px;
+}
+
+.cdata{
+    border-radius: 5px;
+    line-height: 40px;
+    padding: 10px;
+    margin: 10px 50px;
+    color: #FFFFFF;
+    background: #0C0098;
+}
+
+
+
+/*progress bar module*/
+
+.progress-ring__circle {
+    transition: stroke-dashoffset 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+
+
+
