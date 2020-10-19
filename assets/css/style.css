@@ -124,7 +124,7 @@ span{
 
 #asendusteTitle{
     text-align: left;
-    margin: 10px 15px 0;
+    margin: 15px 20px 0;
     padding: 0;
 }
 
@@ -165,7 +165,7 @@ span{
     flex-direction: row;
     align-items: stretch;
     height: 200px;
-    background: #cecece;
+    background: #f2f1f2;
     border-radius: 25px;
     margin: 0 10px 0;
 }
