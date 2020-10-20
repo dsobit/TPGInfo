@@ -113,6 +113,7 @@ span{
     height: 100vh;
 }
 
+
 #logoimg{
     width: 150px;
 }
@@ -128,11 +129,13 @@ span{
     padding: 0;
 }
 
-.timebox, .datebox, .analogtimebox{
+.timebox, .datebox, .analogtimebox, .lo{
     margin: 10px 10px;
-    background: #F0F0F0;
     border-radius: 10px;
     padding: 10px;
+    background: #ffffff;
+    box-shadow:  20px 20px 60px #cecece,
+    -2px -2px 10px #ffffff;
 }
 
 .timebox{
@@ -141,23 +144,22 @@ span{
 
 .datebox{
     height: 250px;
-    background: #E5E5E5;
 }
 
 .analogtimebox{
     flex: 1;
     margin-bottom: 25px;
-    background: #cecece;
-    /*height: 340px;*/
 }
 
 .newsline{
     flex: 1;
     text-align: justify;
-    background: #F0F0F0;
+    background: #ffffff;
     border-radius: 25px;
     margin: 0px 10px 25px;
     padding: 10px 24px 100px;
+    box-shadow:  20px 20px 60px #cecece,
+    -2px -2px 10px #ffffff;
 }
 
 .ilm{
@@ -165,9 +167,11 @@ span{
     flex-direction: row;
     align-items: stretch;
     height: 200px;
-    background: #f2f1f2;
+    background: #ffffff;
     border-radius: 25px;
     margin: 0 10px 0;
+    box-shadow:  20px 20px 60px #cecece,
+    -2px -2px 10px #ffffff;
 }
 
 #ilm1, #ilm2, #ilm3, #ilm4, #ilm5{
@@ -203,15 +207,18 @@ span{
     display: flex;
     flex-direction: column;
     align-items: stretch;
+
 }
 
 .peatus1, .peatus2{
     flex: 1;
     width: 200px;
-    background: #ECECEC;
+    background: #ffffff;
     border-radius: 25px;
     margin: 0 30px 25px 0;
     text-align: left;
+    box-shadow:  20px 20px 60px #cecece,
+    -2px -2px 10px #ffffff;
 }
 
 .peatus2{
@@ -227,15 +234,19 @@ span{
 
 .uldandmed{
     width: 100%;
-    background: #cecece;
+    background: #ffffff;
     border-radius: 25px;
+    box-shadow:  20px 20px 60px #cecece,
+    -2px -2px 10px #ffffff;
 }
 
 .asendused{
     height: 230px;
-    background: #cecece;
+    background: #ffffff;
     border-radius: 25px;
-    margin: 15px 10px 25px;
+    margin: 25px 10px 25px;
+    box-shadow:  20px 20px 60px #cecece,
+    -2px -2px 10px #ffffff;
 }
 
 .cdata{
@@ -245,6 +256,16 @@ span{
     margin: 10px 50px;
     color: #FFFFFF;
     background: #0C0098;
+}
+
+.logobox{
+    height: 90px;
+    margin: 0 10px 10px;
+    border-radius: 10px;
+    padding: 10px;
+    background: #ffffff;
+    box-shadow:  20px 20px 60px #cecece,
+    -2px -2px 10px #ffffff;
 }
 
 

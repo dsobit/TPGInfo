@@ -13,16 +13,16 @@
         <div class="timebox">
             <div class="vertical-center">
                 <span>
-                <h1>12:56</h1>
+                <h1 id="clock"></h1>
                 </span>
             </div>
         </div>
         <div class="datebox">
             <div class="vertical-center">
                 <span>
-                    <h1>10</h1>
-                    <h1>Oktoober</h1>
-                    <h1>2020</h1>
+                    <h1 id="date"></h1>
+                    <h1 id="month"></h1>
+                    <h1 id="year"></h1>
                 </span>
             </div>
         </div>
@@ -36,7 +36,7 @@
                         <circle
                                 class="progress-ring__circle"
                                 stroke="red"
-                                stroke-width="4"
+                                stroke-width="8"
                                 fill="transparent"
                                 r="52"
                                 cx="60"
@@ -44,30 +44,6 @@
                         <text id="progressper" x="50%" y="50%" text-anchor="middle" stroke="#000"  dy=".3em"></text>
                     </svg>
                 </div>
-
-                    <script>
-                        let i = 0;
-                        const interval = setInterval(() => {
-                            i++;
-                            document.getElementById("progressper").textContent = i;
-                            setProgress(i);
-                            if (i === 100)
-                                i=0;
-
-                        }, 1000);
-
-                        var circle = document.querySelector('circle');
-                        var radius = circle.r.baseVal.value;
-                        var circumference = radius * 2 * Math.PI;
-
-                        circle.style.strokeDasharray = `${circumference} ${circumference}`;
-                        circle.style.strokeDashoffset = `${circumference}`;
-
-                        function setProgress(percent) {
-                            const offset = circumference - percent / 100 * circumference;
-                            circle.style.strokeDashoffset = offset;
-                        }
-                    </script>
                 <p1 class="boldtxt">Aega on jäänud tunni lõppuni</p1><br>
             </div>
         </div>
@@ -112,7 +88,7 @@
             <div class="peatused">
                 <div class="peatus1">
                     <div class="row">
-                        <img class="peatusicon" src="assets/svg/bus-stop.svg" alt="Bus-stop icon">
+                        <img class="peatusicon" src="assets/svg/bus-stop2.svg" alt="Bus-stop icon">
                         <p1 id="peatusTitle1">Pae peatus</p1>
                     </div>
                     <div class="row">
@@ -128,7 +104,7 @@
                 </div>
                 <div class="peatus2">
                     <div class="row">
-                        <img class="peatusicon" src="assets/svg/bus-stop.svg" alt="Bus-stop icon">
+                        <img class="peatusicon" src="assets/svg/bus-stop2.svg" alt="Bus-stop icon">
                         <p1 id="peatusTitle2">Kiive peatus</p1>
                     </div>
                     <div class="row">
@@ -162,7 +138,8 @@
     </div>
 </div>
 
-
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="assets/js/script.js"></script>
 
 </body>
 </html>
