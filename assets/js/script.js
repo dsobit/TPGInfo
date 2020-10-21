@@ -43,7 +43,7 @@ function updateprogressbar() {
 function setProgress(percent) {
     var circle = document.querySelector('circle');
     var radius = circle.r.baseVal.value;
-    var circumference = radius * 3 * Math.PI;
+    var circumference = radius * 2 * Math.PI;
 
     circle.style.strokeDasharray = `${circumference} ${circumference}`;
     circle.style.strokeDashoffset = `${circumference}`;

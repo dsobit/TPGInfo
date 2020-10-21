@@ -13,7 +13,24 @@ body{
     height: 100%;
     width: 100%;
     margin: 0;
+    background: linear-gradient(-45deg, #d77a06, #ffffff, #ffffff, #d77a06);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+
 }
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
 
 img{
     width: 100%;
@@ -134,8 +151,7 @@ span{
     border-radius: 10px;
     padding: 10px;
     background: #ffffff;
-    box-shadow:  20px 20px 60px #cecece,
-    -2px -2px 10px #ffffff;
+    box-shadow:  20px 20px 60px #959595;
 }
 
 .timebox{
@@ -158,8 +174,7 @@ span{
     border-radius: 25px;
     margin: 0px 10px 25px;
     padding: 10px 24px 100px;
-    box-shadow:  20px 20px 60px #cecece,
-    -2px -2px 10px #ffffff;
+    box-shadow:  20px 20px 60px #959595;
 }
 
 .ilm{
@@ -170,8 +185,7 @@ span{
     background: #ffffff;
     border-radius: 25px;
     margin: 0 10px 0;
-    box-shadow:  20px 20px 60px #cecece,
-    -2px -2px 10px #ffffff;
+    box-shadow:  20px 20px 60px #959595;
 }
 
 #ilm1, #ilm2, #ilm3, #ilm4, #ilm5{
@@ -217,8 +231,7 @@ span{
     border-radius: 25px;
     margin: 0 30px 25px 0;
     text-align: left;
-    box-shadow:  20px 20px 60px #cecece,
-    -2px -2px 10px #ffffff;
+    box-shadow:  20px 20px 60px #959595;
 }
 
 .peatus2{
@@ -236,8 +249,7 @@ span{
     width: 100%;
     background: #ffffff;
     border-radius: 25px;
-    box-shadow:  20px 20px 60px #cecece,
-    -2px -2px 10px #ffffff;
+    box-shadow:  20px 20px 60px #959595;
 }
 
 .asendused{
@@ -245,8 +257,7 @@ span{
     background: #ffffff;
     border-radius: 25px;
     margin: 25px 10px 25px;
-    box-shadow:  20px 20px 60px #cecece,
-    -2px -2px 10px #ffffff;
+    box-shadow:  20px 20px 60px #959595;
 }
 
 .cdata{
@@ -264,8 +275,7 @@ span{
     border-radius: 10px;
     padding: 10px;
     background: #ffffff;
-    box-shadow:  20px 20px 60px #cecece,
-    -2px -2px 10px #ffffff;
+    box-shadow:  20px 20px 60px #959595;
 }
 
 
