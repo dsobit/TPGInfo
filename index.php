@@ -1,6 +1,6 @@
 <?php
 include 'functions.php';
-getweather();?>
+$weather = getweather();?>
 
 <html lang="en">
 <head>
@@ -67,29 +67,29 @@ getweather();?>
     <div class="databox">
         <div class="ilm">
             <div id="ilm1">
-                <img class="weathericon" src="assets/svg/weathericons/sunny2.svg" alt="Weather icon"><br>
-                <p1 id="tmp1">7 - 13°C</p1>
-                <p1 id="date1" >24.10.2020</p1>
+                <img class="weathericon" src="assets/svg/weathericons/sunny.svg" alt="Weather icon"><br>
+                <p1 id="tmp1"><?php echo $weather[0][0]?>°C</p1>
+                <p1 id="date1" ><?php echo $weather[0][1]?></p1>
             </div>
             <div id="ilm2">
-                <img class="weathericon" src="assets/svg/weathericons/cloudy2.svg" alt="Weather icon"><br>
-                <p1 id="tmp2">7 - 13°C</p1>
-                <p1 id="date2" >-7 - 10 °C</p1>
+                <img class="weathericon" src="assets/svg/weathericons/cloudy.svg" alt="Weather icon"><br>
+                <p1 id="tmp2"><?php echo $weather[1][0]?>°C</p1>
+                <p1 id="date2" ><?php echo $weather[1][1]?></p1>
             </div>
             <div id="ilm3">
                 <img class="weathericon" src="assets/svg/weathericons/snowing.svg" alt="Weather icon"><br>
-                <p1 id="tmp3">7 - 13°C</p1>
-                <p1 id="date3" >-7 - 10 °C</p1>
+                <p1 id="tmp3"><?php echo $weather[2][0]?>°C</p1>
+                <p1 id="date3" ><?php echo $weather[2][1]?></p1>
             </div>
             <div id="ilm4">
-                <img class="weathericon" src="assets/svg/weathericons/raining-12.svg" alt="Weather icon"><br>
-                <p1 id="tmp4">7 - 13°C</p1>
-                <p1 id="date4" >-7 - 10 °C</p1>
+                <img class="weathericon" src="assets/svg/weathericons/raining.svg" alt="Weather icon"><br>
+                <p1 id="tmp4"><?php echo $weather[3][0]?>°C</p1>
+                <p1 id="date4" ><?php echo $weather[3][1]?></p1>
             </div>
             <div id="ilm5">
                 <img class="weathericon" src="assets/svg/weathericons/thunderstorm.svg" alt="Weather icon"><br>
-                <p1 id="tmp5" >-7 - 10 °C</p1>
-                <p1 id="date5" >-7 - 10 °C</p1>
+                <p1 id="tmp5" ><?php echo $weather[4][0]?>°C</p1>
+                <p1 id="date5" ><?php echo $weather[4][1]?></p1>
             </div>
         </div>
         <div class="data">
