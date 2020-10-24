@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+include 'functions.php';
+getweather();?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,17 +33,17 @@
             <div class="vertical-center">
                 <div>
                     <svg
-                            class="progress-ring"
-                            width="120"
-                            height="120">
+                        class="progress-ring"
+                        width="120"
+                        height="120">
                         <circle
-                                class="progress-ring__circle"
-                                stroke="red"
-                                stroke-width="8"
-                                fill="transparent"
-                                r="52"
-                                cx="60"
-                                cy="60"/>
+                            class="progress-ring__circle"
+                            stroke="red"
+                            stroke-width="8"
+                            fill="transparent"
+                            r="52"
+                            cx="60"
+                            cy="60"/>
                         <text id="progressper" x="50%" y="50%" text-anchor="middle" stroke="#000"  dy=".3em"></text>
                     </svg>
                 </div>
@@ -66,22 +69,27 @@
             <div id="ilm1">
                 <img class="weathericon" src="assets/svg/weathericons/sunny2.svg" alt="Weather icon"><br>
                 <p1 id="tmp1">7 - 13°C</p1>
+                <p1 id="date1" >24.10.2020</p1>
             </div>
             <div id="ilm2">
                 <img class="weathericon" src="assets/svg/weathericons/cloudy2.svg" alt="Weather icon"><br>
                 <p1 id="tmp2">7 - 13°C</p1>
+                <p1 id="date2" >-7 - 10 °C</p1>
             </div>
             <div id="ilm3">
                 <img class="weathericon" src="assets/svg/weathericons/snowing.svg" alt="Weather icon"><br>
                 <p1 id="tmp3">7 - 13°C</p1>
+                <p1 id="date3" >-7 - 10 °C</p1>
             </div>
             <div id="ilm4">
                 <img class="weathericon" src="assets/svg/weathericons/raining-12.svg" alt="Weather icon"><br>
                 <p1 id="tmp4">7 - 13°C</p1>
+                <p1 id="date4" >-7 - 10 °C</p1>
             </div>
             <div id="ilm5">
                 <img class="weathericon" src="assets/svg/weathericons/thunderstorm.svg" alt="Weather icon"><br>
                 <p1 id="tmp5" >-7 - 10 °C</p1>
+                <p1 id="date5" >-7 - 10 °C</p1>
             </div>
         </div>
         <div class="data">

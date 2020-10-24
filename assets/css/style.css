@@ -13,7 +13,7 @@ body{
     height: 100%;
     width: 100%;
     margin: 0;
-    background: linear-gradient(-45deg, #d77a06, #ffffff, #ffffff, #d77a06);
+    background: linear-gradient(-45deg, #d77a06, #ffffff, #d77a06, #d77a06);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 
@@ -46,7 +46,7 @@ h1{
 }
 
 
-h3{
+h2{
     padding: 24px 0 24px;
     font-size: 24px;
 }
@@ -89,7 +89,6 @@ span{
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    text-align: center;
     box-sizing: border-box;
     /*border: 1px solid black ;*/
     padding: 45px 10px 0px;
@@ -118,6 +117,7 @@ span{
 .sidebarbox{
     width: 14vw;
     height: 100vh;
+    text-align: center;
 }
 
 .newsbox{
@@ -141,7 +141,10 @@ span{
 }
 
 #asendusteTitle{
-    text-align: left;
+    margin: 15px 20px 0;
+    padding: 0;
+}
+#uldandmetetitle{
     margin: 15px 20px 0;
     padding: 0;
 }
@@ -261,10 +264,11 @@ span{
 }
 
 .cdata{
+    height: fit-content;
     border-radius: 5px;
     line-height: 40px;
     padding: 10px;
-    margin: 10px 50px;
+    margin: 25px 20px;
     color: #FFFFFF;
     background: #0C0098;
 }
