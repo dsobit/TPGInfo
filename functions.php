@@ -55,10 +55,10 @@ function getnews(){
 }
 
 function getbus(){
-    $url = "https://web.peatus.ee/86014d17-925a-4540-8115-5a00d2d9f0cb";
+    /*$url = "https://web.peatus.ee/86014d17-925a-4540-8115-5a00d2d9f0cb";
     $json = file_get_contents($url);
     $jsondata = json_decode($json, True);
-    print_r($jsondata);
+    print_r("start".$jsondata);*/
 
 }
 

@@ -1,6 +1,7 @@
 <?php
 include 'functions.php';
-$weather = getweather();?>
+$weather = getweather();
+getbus();?>
 
 <html lang="en">
 <head>
