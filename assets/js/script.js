@@ -22,11 +22,11 @@ function updateCalendar() {
         "Juuli", "August", "September", "Oktoober", "November", "Detsember"
     ];
     var currentDated= new Date();
-    var currentDate = currentDated.getDay();
+    var currentDate = currentDated.getDate();
     var currentMonth= currentDated.getMonth();
     var currentYear= currentDated.getFullYear();
     currentDate = (currentDate < 10 ? "0" : "") + currentDate;
-    $("#date").html(currentDate);
+    $("#dateq").html(currentDate);
     $("#month").html(monthNames[currentMonth]);
     $("#year").html(currentYear);
 }
