@@ -55,9 +55,41 @@ function getnews(){
 }
 
 function getbus(){
-    /*$url = "https://web.peatus.ee/86014d17-925a-4540-8115-5a00d2d9f0cb";
-    $json = file_get_contents($url);
-    $jsondata = json_decode($json, True);
+    $url[0] = "https://transport.tallinn.ee/siri-stop-departures.php?stopid=1426"; //Pae 50;58;55
+    $url[1] = "https://transport.tallinn.ee/siri-stop-departures.php?stopid=1430"; // Pae 13;7
+    $url[2] = "https://transport.tallinn.ee/siri-stop-departures.php?stopid=1424"; //Majaka põik 2;4
+    $url[3] = "https://transport.tallinn.ee/siri-stop-departures.php?stopid=1412"; //Kiive 50;58;7;13
+    $stopname[0] = "Pae";
+    $stopname[1] = "Pae";
+    $stopname[2] = "Majaka";
+    $stopname[3] = "Kiive";
+    for ($i=0; $i<4; $i++){
+        $data = file_get_contents($url[$i]);
+        $data = array_slice(explode(",", $data),6);
+        if($i==2) $data = array_slice(explode("tram", implode(" ",$data)),1);
+        else $data = array_slice(explode("bus", implode(" ",$data)),1);
+
+        $index = 0;
+        foreach ($data as $datapiece){
+            $stopdata[$i][$index][0] = $stopname[$i];
+            $datapiece = explode(" ", $datapiece);
+            $stopdata[$i][$index][1] = $datapiece[1];
+            $time = intval($datapiece[3]);
+            $stopdata[$i][$index][2] = gmdate("H:i",$time);
+            //print($stopdata[0][$index][0].$stopdata[0][$index][1]);
+            $index++;
+        }
+    }
+
+
+
+
+    return $stopdata;
+
+
+
+    //$json = file_get_contents($url);
+    /*$jsondata = json_decode($json, True);
     print_r("start".$jsondata);*/
 
 }
