@@ -80,32 +80,32 @@ $stopdata = getbus();?>
                 <div class="peatus1">
                     <div class="row">
                         <img class="peatusicon" src="assets/svg/bus-stop2.svg" alt="Bus-stop icon">
-                        <p1 id="peatusTitle1"><?php echo $stopdata[0][0][0]?> peatus</p1>
+                        <p1 id="peatusTitle1"><?php /*echo $stopdata[0][0][0]*/?> peatus</p1>
                     </div>
                     <div class="row">
-                        <p1 class="boldtxt" id="busnum1"><?php echo $stopdata[0][0][1]?></p1>
-                        <p1 id="bustime1"><?php echo $stopdata[0][0][2]?></p1>
+                        <p1 class="boldtxt" id="busnum1"><?php /*echo $stopdata[0][0][1]*/?></p1>
+                        <p1 id="bustime1"><?php /*echo $stopdata[0][0][2]*/?></p1>
                     </div>
                     <hr>
                     <div class="row">
-                        <p1 class="boldtxt" id="busnum2"><?php echo $stopdata[0][1][1]?></p1>
-                        <p1 id="bustime2"><?php echo $stopdata[0][1][2]?></p1>
+                        <p1 class="boldtxt" id="busnum2"><?php /*echo $stopdata[0][1][1]*/?></p1>
+                        <p1 id="bustime2"><?php /*echo $stopdata[0][1][2]*/?></p1>
                     </div>
 
                 </div>
                 <div class="peatus2">
                     <div class="row">
                         <img class="peatusicon" src="assets/svg/tram.svg" alt="Bus-stop icon">
-                        <p1 id="peatusTitle2"><?php echo $stopdata[2][0][0]?> peatus</p1>
+                        <p1 id="peatusTitle2"><?php /*echo $stopdata[2][0][0]*/?> peatus</p1>
                     </div>
                     <div class="row">
-                        <p1 class="boldtxt" id="busnum3"><?php echo $stopdata[2][0][1]?></p1>
-                        <p1 id="bustime3"><?php echo $stopdata[2][0][2]?></p1>
+                        <p1 class="boldtxt" id="busnum3"><?php /*echo $stopdata[2][0][1]*/?></p1>
+                        <p1 id="bustime3"><?php /*echo $stopdata[2][0][2]*/?></p1>
                     </div>
                     <hr>
                     <div class="row">
-                        <p1 class="boldtxt" id="busnum4"><?php echo $stopdata[2][1][1]?></p1>
-                        <p1 id="bustime4"><?php echo $stopdata[2][1][2]?></p1>
+                        <p1 class="boldtxt" id="busnum4"><?php /*echo $stopdata[2][1][1]*/?></p1>
+                        <p1 id="bustime4"><?php /*echo $stopdata[2][1][2]*/?></p1>
                     </div>
                 </div>
             </div>
