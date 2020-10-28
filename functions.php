@@ -82,11 +82,7 @@ function getbus(){
     }*/
 
     $url = "https://transport.tallinn.ee/siri-stop-departures.php?stopid=1412,1424,1426,1430";
-    $stopName[0] =  "Kiive";
-    $stopName[1] =  "Majaka põik";
-    $stopName[2] =  "Pae";
-    $stopName[3] =  "Pae";
-
+    $stopName =  array("Kiive","Majaka põik","Pae","Pae") ;
     $data = file_get_contents($url);
     $data = explode("stop,", $data);
     $data = str_replace(array("1412", "1424", "1426", "1430"),"",$data);
@@ -98,16 +94,22 @@ function getbus(){
         if (strpos($line, 'bus') !== false) $line = explode("bus", $line);
         else if (strpos($line, 'tram') !== false) $line = explode("tram", $line);
         unset($line[0]);
-
+        $linenum = 0;
         foreach ($line as $tunit){
             $tunit = explode(",", $tunit);
             unset($tunit[0]);
-            $result[$stop][0] = $tunit[1];
-            $time = intval($tunit[3]);
-            $result[$stop][1] = gmdate("H:i",$time);
-            print ($stopName[$stop]." ". $result[$stop][0]." ".$result[$stop][1]."<br>");
+            $result[$stop][$linenum][0] = $tunit[1];
+            $time = intval($tunit[2]);
+            $result[$stop][$linenum][1] = gmdate("H:i",$time);
+            $linenum++;
+            //print ($stopName[$stop]." ". $result[$stop][0]." ".$result[$stop][1]."<br>");
         }
         $stop++;
+    }
+
+
+    if (!empty($result)) {
+        return $result;
     }
 
     //$json = file_get_contents($url);

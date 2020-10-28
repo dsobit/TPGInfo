@@ -1,6 +1,7 @@
 <?php
 include 'functions.php';
 $weather = getweather();
+$stopName = array("Kiive","Majaka põik","Pae") ;
 $stopdata = getbus();?>
 
 <html lang="en">
@@ -57,7 +58,7 @@ $stopdata = getbus();?>
 
         <div class="newsline">
             <h1 id="newsTitle">Uudised</h1>
-            <h2>Uudiste teema 1</h2>
+            <h2>Uudiste teema</h2>
             <p1>
                 On recommend tolerably my belonging or am. Mutual has cannot beauty indeed now sussex merely you. It possible no husbands jennings ye offended packages pleasant he. Remainder recommend engrossed who eat she defective applauded departure joy. Get dissimilar not introduced day her apartments. Fully as taste he mr do smile abode every. Luckily offered article led lasting country minutes nor old. Happen people things oh is oppose up parish effect. Law handsome old outweigh humoured far appetite.
                 Yet remarkably appearance get him his projection. Diverted endeavor bed peculiar men the not desirous. Acuteness abilities ask can offending furnished fulfilled sex. Warrant fifteen exposed
@@ -80,32 +81,32 @@ $stopdata = getbus();?>
                 <div class="peatus1">
                     <div class="row">
                         <img class="peatusicon" src="assets/svg/bus-stop2.svg" alt="Bus-stop icon">
-                        <p1 id="peatusTitle1"><?php /*echo $stopdata[0][0][0]*/?> peatus</p1>
+                        <p1 id="peatusTitle1"><?php echo $stopName[2]?> peatus</p1>
                     </div>
                     <div class="row">
-                        <p1 class="boldtxt" id="busnum1"><?php /*echo $stopdata[0][0][1]*/?></p1>
-                        <p1 id="bustime1"><?php /*echo $stopdata[0][0][2]*/?></p1>
+                        <p1 class="boldtxt" id="busnum1"><?php echo $stopdata[2][0][0]?></p1>
+                        <p1 id="bustime1"><?php echo $stopdata[2][0][1]?></p1>
                     </div>
                     <hr>
                     <div class="row">
-                        <p1 class="boldtxt" id="busnum2"><?php /*echo $stopdata[0][1][1]*/?></p1>
-                        <p1 id="bustime2"><?php /*echo $stopdata[0][1][2]*/?></p1>
+                        <p1 class="boldtxt" id="busnum2"><?php echo $stopdata[2][1][0]?></p1>
+                        <p1 id="bustime2"><?php echo $stopdata[2][1][1]?></p1>
                     </div>
 
                 </div>
                 <div class="peatus2">
                     <div class="row">
                         <img class="peatusicon" src="assets/svg/tram.svg" alt="Bus-stop icon">
-                        <p1 id="peatusTitle2"><?php /*echo $stopdata[2][0][0]*/?> peatus</p1>
+                        <p1 id="peatusTitle2"><?php echo $stopName[1]?> peatus</p1>
                     </div>
                     <div class="row">
-                        <p1 class="boldtxt" id="busnum3"><?php /*echo $stopdata[2][0][1]*/?></p1>
-                        <p1 id="bustime3"><?php /*echo $stopdata[2][0][2]*/?></p1>
+                        <p1 class="boldtxt" id="busnum3"><?php echo $stopdata[1][0][0]?></p1>
+                        <p1 id="bustime3"><?php echo $stopdata[1][0][1]?></p1>
                     </div>
                     <hr>
                     <div class="row">
-                        <p1 class="boldtxt" id="busnum4"><?php /*echo $stopdata[2][1][1]*/?></p1>
-                        <p1 id="bustime4"><?php /*echo $stopdata[2][1][2]*/?></p1>
+                        <p1 class="boldtxt" id="busnum4"><?php echo $stopdata[1][1][0]?></p1>
+                        <p1 id="bustime4"><?php echo $stopdata[1][1][1]?></p1>
                     </div>
                 </div>
             </div>
