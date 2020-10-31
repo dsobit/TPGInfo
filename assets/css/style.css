@@ -141,7 +141,7 @@ span{
 }
 
 #asendusteTitle{
-    margin: 15px 20px 0;
+    margin: 15px 0 0;
     padding: 0;
 }
 #uldandmetetitle{
@@ -261,7 +261,10 @@ span{
     background: #ffffff;
     border-radius: 25px;
     margin: 25px 10px 25px;
+    padding: 0 20px 10px;
     box-shadow:  20px 20px 60px #959595;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .cdata{

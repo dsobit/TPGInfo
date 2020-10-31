@@ -6,6 +6,7 @@ $issues = array();
 
 $missingExtensions = array();
 extension_loaded('curl') || $missingExtensions[] = 'curl';
+extension_loaded('json') || $missingExtensions[] = 'json';
 
 if ($missingExtensions) {
     $issues[] = 'Your Composer dependencies require the following PHP extensions to be installed: ' . implode(', ', $missingExtensions);

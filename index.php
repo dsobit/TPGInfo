@@ -1,8 +1,9 @@
 <?php
 include 'functions.php';
 $weather = getweather();
-$stopName = array("Kiive","Majaka põik","Pae") ;
-$stopdata = getbus();?>
+$stopdata = getbus();
+$menudata = getmenu();
+?>
 
 <html lang="en">
 <head>
@@ -81,32 +82,32 @@ $stopdata = getbus();?>
                 <div class="peatus1">
                     <div class="row">
                         <img class="peatusicon" src="assets/svg/bus-stop2.svg" alt="Bus-stop icon">
-                        <p1 id="peatusTitle1"><?php echo $stopName[2]?> peatus</p1>
+                        <p1 id="peatusTitle1"><?php echo $stopdata[2][0][0]?> peatus</p1>
                     </div>
                     <div class="row">
-                        <p1 class="boldtxt" id="busnum1"><?php echo $stopdata[2][0][0]?></p1>
-                        <p1 id="bustime1"><?php echo $stopdata[2][0][1]?></p1>
+                        <p1 class="boldtxt" id="busnum1"><?php echo $stopdata[2][0][1]?></p1>
+                        <p1 id="bustime1"><?php echo $stopdata[2][0][2]?></p1>
                     </div>
                     <hr>
                     <div class="row">
-                        <p1 class="boldtxt" id="busnum2"><?php echo $stopdata[2][1][0]?></p1>
-                        <p1 id="bustime2"><?php echo $stopdata[2][1][1]?></p1>
+                        <p1 class="boldtxt" id="busnum2"><?php echo $stopdata[2][1][1]?></p1>
+                        <p1 id="bustime2"><?php echo $stopdata[2][1][2]?></p1>
                     </div>
 
                 </div>
                 <div class="peatus2">
                     <div class="row">
                         <img class="peatusicon" src="assets/svg/tram.svg" alt="Bus-stop icon">
-                        <p1 id="peatusTitle2"><?php echo $stopName[1]?> peatus</p1>
+                        <p1 id="peatusTitle2"><?php echo $stopdata[1][0][0]?> peatus</p1>
                     </div>
                     <div class="row">
-                        <p1 class="boldtxt" id="busnum3"><?php echo $stopdata[1][0][0]?></p1>
-                        <p1 id="bustime3"><?php echo $stopdata[1][0][1]?></p1>
+                        <p1 class="boldtxt" id="busnum3"><?php echo $stopdata[1][0][1]?></p1>
+                        <p1 id="bustime3"><?php echo $stopdata[1][0][2]?></p1>
                     </div>
                     <hr>
                     <div class="row">
-                        <p1 class="boldtxt" id="busnum4"><?php echo $stopdata[1][1][0]?></p1>
-                        <p1 id="bustime4"><?php echo $stopdata[1][1][1]?></p1>
+                        <p1 class="boldtxt" id="busnum4"><?php echo $stopdata[1][1][1]?></p1>
+                        <p1 id="bustime4"><?php echo $stopdata[1][1][2]?></p1>
                     </div>
                 </div>
             </div>
@@ -126,6 +127,18 @@ $stopdata = getbus();?>
 
         <div class="asendused">
             <h2 id="asendusteTitle">Koolisöökla päevamenüü</h2>
+            <?php
+
+            $dayofweek = date( 'N')-1;
+            if($dayofweek<5){
+                foreach ($menudata[$dayofweek] as $row){
+            ?>
+                <p1><?php echo $row ?></p1><br>
+            <?php
+                }
+            }?>
+
+
         </div>
     </div>
 </div>

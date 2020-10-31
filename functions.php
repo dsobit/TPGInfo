@@ -1,5 +1,7 @@
 <?php
-
+include('config.php');
+include ('simple_html_dom.php');
+$timeconfig = gettiming();
 function getweather(){
     $url = "http://ilm.ee/sisu/2015/json_linnailm.php3?linn=L*tallinn*0";
     $json = file_get_contents($url);
@@ -98,9 +100,10 @@ function getbus(){
         foreach ($line as $tunit){
             $tunit = explode(",", $tunit);
             unset($tunit[0]);
-            $result[$stop][$linenum][0] = $tunit[1];
+            $result[$stop][$linenum][0] = $stopName[$stop];
+            $result[$stop][$linenum][1] = $tunit[1];
             $time = intval($tunit[2]);
-            $result[$stop][$linenum][1] = gmdate("H:i",$time);
+            $result[$stop][$linenum][2] = gmdate("H:i",$time);
             $linenum++;
             //print ($stopName[$stop]." ". $result[$stop][0]." ".$result[$stop][1]."<br>");
         }
@@ -111,11 +114,6 @@ function getbus(){
     if (!empty($result)) {
         return $result;
     }
-
-    //$json = file_get_contents($url);
-    /*$jsondata = json_decode($json, True);
-    print_r("start".$jsondata);*/
-
 }
 
 function getasendused(){
@@ -123,11 +121,59 @@ function getasendused(){
 }
 
 function getmenu(){
+    $url = "http://www.astuleleek.ee/et/public.menu-aca27372-33ca-453d-beef-44e11a28fd4f/foodtypes-2/groups-1/";
+    $data = file_get_html($url);
+    $count = 0;
+    $dayselect = 0;
+    foreach($data->find('tr') as $row) {
+        $column = $row->find('td',0)->plaintext;
+        if($column != "Keskmine:"){
+            if(strpos($column, 'Esmaspäev') !== false){
+                $count = 0;
+                $dayselect = 0;
+            }
+            else if(strpos($column, 'Teisipäev') !== false){
+                $count = 0;
+                $dayselect = 1;
+            }
+            else if(strpos($column, 'Kolmapäev') !== false){
+                $count = 0;
+                $dayselect = 2;
+            }
+            else if(strpos($column, 'Neljapäev') !== false){
+                $count = 0;
+                $dayselect = 3;
+            }
+            else if(strpos($column, 'Reede') !== false){
+                $count = 0;
+                $dayselect = 4;
+            }
+            else{
+                $menudata[$dayselect][$count] = $column;
+                $count++;
 
+            }
+        }
+    }
+    if (!empty($menudata)) {
+        return $menudata;
+    }
 }
 
 function gettime(){
-
+    global $timeconfig;
+    date_default_timezone_set('Europe/Riga');
+    $count = 0;
+    foreach ($timeconfig as $nexttime){
+        if($count>0) $previous = $count-1;
+        else $previous = $count;
+        $previousTime = $timeconfig[$previous];
+        if(date('H:i') < date('H:i', strtotime($nexttime))){
+            return $previousTime." ".$nexttime;
+        }
+        $count++;
+    }
+    return "00:00";
 }
 
-?>
+
