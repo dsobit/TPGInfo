@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '07020224dae4da2bf10672b911ada34052c8dcad',
+    'reference' => 'aaa7a1cba2fcc4d677115b230f3953e012c630d8',
     'name' => 'vendor_name/info',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '07020224dae4da2bf10672b911ada34052c8dcad',
+      'reference' => 'aaa7a1cba2fcc4d677115b230f3953e012c630d8',
     ),
   ),
 );

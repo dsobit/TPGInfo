@@ -125,20 +125,8 @@ $menudata = getmenu();
 
 
 
-        <div class="asendused">
+        <div class="menu" id="menu">
             <h2 id="asendusteTitle">Koolisöökla päevamenüü</h2>
-            <?php
-
-            $dayofweek = date( 'N')-1;
-            if($dayofweek<5){
-                foreach ($menudata[$dayofweek] as $row){
-            ?>
-                <p1><?php echo $row ?></p1><br>
-            <?php
-                }
-            }?>
-
-
         </div>
     </div>
 </div>

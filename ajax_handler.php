@@ -5,6 +5,6 @@ if(isset($_POST['function'])) {
         echo gettime();
     }
     else if($_POST['function'] == 'getmenu') {
-        echo json_encode(getmenu());
+        echo json_encode(getmenu(), JSON_UNESCAPED_UNICODE);
     }
 }
