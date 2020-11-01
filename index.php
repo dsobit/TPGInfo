@@ -1,8 +1,8 @@
 <?php
 include 'functions.php';
-$weather = getweather();
+//$weather = getweather();
 $stopdata = getbus();
-$menudata = getmenu();
+//$menudata = getmenu();
 ?>
 
 <html lang="en">
@@ -71,9 +71,9 @@ $menudata = getmenu();
         <div class="ilm">
             <?php for ($i = 0; $i < 5; $i++){?>
             <div id="ilm<?php echo $i+1;?>">
-                <img class="weathericon" src="assets/svg/weathericons/<?php echo $weather[$i][3];?>" alt="Weather icon"><br>
-                <p1 id="tmp<?php echo $i+1;?>"><?php echo $weather[$i][0];?>°C</p1>
-                <p1 id="date<?php echo $i+1;?>"><?php echo $weather[$i][1];?></p1>
+                <img id="ilmpic<?php echo $i+1;?>" class="weathericon" src="assets/svg/weathericons/thermometer.svg" alt="Weather icon"><br>
+                <p1 id="tmp<?php echo $i+1;?>">°C</p1>
+                <p1 id="date<?php echo $i+1;?>"></p1>
             </div>
             <?php }?>
         </div>
@@ -127,6 +127,7 @@ $menudata = getmenu();
 
         <div class="menu" id="menu">
             <h2 id="asendusteTitle">Koolisöökla päevamenüü</h2>
+
         </div>
     </div>
 </div>

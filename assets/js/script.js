@@ -7,6 +7,9 @@ $(document).ready(function () {
     setInterval(updateprogressbar, 60000);
     updatemenu();
     setInterval(updateCalendar, 36000000);
+    updatemenu();
+    setInterval(updatemenu, 36000000);
+    updateweather(updatemenu, 36000000);
 });
 
 function updateClock() {
@@ -79,21 +82,46 @@ function updatemenu() {
         success: function(response) {
             x = response
             let i;
-            let day = new Date();
-            let n = day.getDay();
-            n = 5;
-            console.log(n);
-            if(0<n<5){
-                for (i = 0; i < x[n-1].length; i++) {
-                    if(x[n-1][i] !== ""){
+            //let day = new Date();
+            //let n = day.getDay();
+            //n = 5;
+            //console.log(n);
+            //if(0<n<5){
+                for (i = 0; i < x.length; i++) {
+                    if(x[i] !== ""){
                         let node = document.createElement("p1");
-                        let texted = document.createTextNode(x[n-1][i].replace(/&nbsp;/g, ' '));
+                        let texted = document.createTextNode(x[i].replace(/&nbsp;/g, ' '));
                         node.appendChild(texted);
                         node.appendChild(document.createElement("br"));
                         document.getElementById("menu").appendChild(node);
                     }
                 }
+            //}
+        }
+    });
+}
+
+function updateweather(){
+    let x;
+    $.ajax({
+        type: "POST",
+        url: 'ajax_handler.php',
+        data: "function=getweather",
+        dataType: "json",
+        encoding: 'UTF-8',
+        success: function (response) {
+            x = response
+            let i;
+            for (i = 0; i < x.length; i++) {
+                let tmpid = "tmp"+(i+1);
+                let dateid = "date"+(i+1);
+                let imageid = "ilmpic"+(i+1);
+                document.getElementById(tmpid).innerHTML = x[i][0]+"°C";
+                document.getElementById(dateid).innerHTML = x[i][1];
+                console.log("assets/svg/weathericons/"+x[i][3]);
+                document.getElementById(imageid).src = "assets/svg/weathericons/"+x[i][3];
             }
+
         }
     });
 }

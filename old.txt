@@ -1,0 +1,18 @@
+            <?php
+
+            $dayofweek = date( 'N')-1;
+            if($dayofweek<5){
+                foreach ($menudata[$dayofweek] as $row){
+            ?>
+                <p1><?php echo $row ?></p1><br>
+            <?php
+                }
+            }?>
+
+<?php for ($i = 0; $i < 5; $i++){?>
+            <div id="ilm<?php echo $i+1;?>">
+                <img id="ilmpic<?php echo $i+1;?>" class="weathericon" src="assets/svg/weathericons/<?php echo $weather[$i][3];?>" alt="Weather icon"><br>
+                <p1 id="tmp<?php echo $i+1;?>"><?php echo $weather[$i][0];?>°C</p1>
+                <p1 id="date<?php echo $i+1;?>"><?php echo $weather[$i][1];?></p1>
+            </div>
+            <?php }?>

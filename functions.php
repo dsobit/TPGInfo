@@ -155,9 +155,13 @@ function getmenu(){
             }
         }
     }
-    if (!empty($menudata)) {
-        return $menudata;
+    $dayofweek = date( 'N')-2;
+    if($dayofweek<5)$returndata = $menudata[$dayofweek];
+
+    if (!empty($returndata)) {
+        return $returndata;
     }
+    return null;
 }
 
 function gettime(){
@@ -175,5 +179,6 @@ function gettime(){
     }
     return "00:00";
 }
+
 
 
