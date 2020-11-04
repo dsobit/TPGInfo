@@ -6,10 +6,9 @@ $(document).ready(function () {
     updateprogressbar();
     setInterval(updateprogressbar, 60000);
     updatemenu();
-    setInterval(updateCalendar, 36000000);
-    updatemenu();
     setInterval(updatemenu, 36000000);
-    updateweather(updatemenu, 36000000);
+    updateweather();
+    setInterval(updateweather, 36000000);
 });
 
 function updateClock() {
@@ -36,7 +35,6 @@ function updateCalendar() {
     $("#month").html(monthNames[currentMonth]);
     $("#year").html(currentYear);
 }
-
 
 function updateprogressbar() {
     $.ajax({
@@ -70,7 +68,6 @@ function setProgress(percent) {
     circle.style.strokeDashoffset = circumference - percent / 100 * circumference;
 }
 
-
 function updatemenu() {
     let x;
     $.ajax({
@@ -81,12 +78,8 @@ function updatemenu() {
         encoding: 'UTF-8',
         success: function(response) {
             x = response
+            console.log(response)
             let i;
-            //let day = new Date();
-            //let n = day.getDay();
-            //n = 5;
-            //console.log(n);
-            //if(0<n<5){
                 for (i = 0; i < x.length; i++) {
                     if(x[i] !== ""){
                         let node = document.createElement("p1");
@@ -126,4 +119,10 @@ function updateweather(){
     });
 }
 
+function updateTimetable(){
 
+}
+
+function changeTimetable(){
+
+}

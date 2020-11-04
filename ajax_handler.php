@@ -10,4 +10,8 @@ if(isset($_POST['function'])) {
     else if($_POST['function'] == 'getweather') {
         if(getweather() !== null)echo json_encode(getweather(), JSON_UNESCAPED_UNICODE);
     }
+    else if($_POST['function'] == 'gettimetable') {
+        if(getweather() !== null)echo json_encode(getbus(), JSON_UNESCAPED_UNICODE);
+    }
+
 }
